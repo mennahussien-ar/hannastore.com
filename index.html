@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hanna Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Amiri', serif;
+      background-color: #fff0f5;
+      color: #4a2c2a;
+      direction: rtl;
+      overflow-x: hidden;
+    }
+    nav {
+      background-color: #ffe4e1;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav h3 {
+      color: #e75480;
+      margin: 0;
+      font-size: 1.5em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #4a2c2a;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #e75480;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      animation: fadeIn 1s ease-in-out;
+      background-image: url('https://i.imgur.com/ZrsBmsR.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+    }
+    .content {
+      max-width: 50%;
+      background-color: rgba(255, 240, 245, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #e75480;
+    }
+    h2 {
+      font-size: 2em;
+      margin-top: 0;
+      color: #d36c93;
+    }
+    p {
+      font-size: 1.2em;
+      color: #5e3d42;
+    }
+    .btn {
+      background-color: #ffb6c1;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 20px;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #f78da7;
+    }
+    .form {
+      margin-top: 30px;
+    }
+    .form input {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #f7c6d0;
+      border-radius: 8px;
+      background-color: #fff;
+      width: 200px;
+    }
+    .form button {
+      padding: 10px 20px;
+      background-color: #f78da7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    .image-container {
+      width: 40%;
+    }
+    .image-container img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+    }
+    .portfolio {
+      padding: 50px 30px;
+      background-color: #fff;
+      text-align: center;
+    }
+    .portfolio h2 {
+      color: #e75480;
+      margin-bottom: 30px;
+    }
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .item {
+      background-color: #ffe4e1;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .item:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .content, .image-container {
+        max-width: 100%;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h3>Hanna Store</h3>
+    <ul>
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#portfolio">المنتجات</a></li>
+      <li><a href="#contact">اتصلي بنا</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="content">
+      <h1>مرحباً بك في</h1>
+      <h2>Hanna Store</h2>
+      <p>أجمل منتجات الكوروشيه المصنوعة بحب وإبداع.</p>
+      <button class="btn">تسوق الآن</button>
+      <div class="form">
+        <input type="email" placeholder="سجلي بريدك الإلكتروني">
+        <button>اشتركي</button>
+        <br><br>
+        <input type="text" placeholder="اسم المستخدم">
+        <input type="password" placeholder="كلمة المرور">
+        <button>تسجيل الدخول</button>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio" id="portfolio">
+    <h2>منتجاتنا</h2>
+    <div class="items">
+      <div class="item">
+        <a href="bag.html">
+          <img src="https://i.postimg.cc/W48517Rm/Whats-App-Image-2025-04-13-at-15-48-23-946f24a2.jpg" alt="شنطة كوروشيه">
+        </a>
+        <p>شنطة يد</p>
+      </div>
+      <div class="item">
+        <a href="clothes.html">
+          <img src="https://i.postimg.cc/5N8TMLtg/Whats-App-Image-2025-04-13-at-15-48-22-e8886494.jpg" alt="ملابس كوروشيه">
+        </a>
+        <p>ملابس كوروشيه</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
