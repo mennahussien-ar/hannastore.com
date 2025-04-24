@@ -84,24 +84,44 @@
 <body>
 
   <div class="container">
-    <img src="https://i.postimg.cc/cHfnZqn0/Whats-App-Image-2025-04-14-at-05-28-01-7dbbeb11.jpg" alt="بلوزة هاند ميد">
+    <img src="https://i.postimg.cc/XvyJJmyv/Whats-App-Image-2025-04-14-at-05-28-01-7dbbeb11.jpg" alt="بلوزة هاند ميد">
     <h1>بلوزة هاند ميد</h1>
     <h2>Handmade Blouse</h2>
     <p class="price">السعر: 250 جنيه</p>
     
     <p>اختر اللون:</p>
-    <select>
+    <select id="color">
       <option>وردي</option>
       <option>أبيض</option>
       <option>أسود</option>
     </select>
 
     <p>اختر الكمية:</p>
-    <input type="number" min="1" value="1" />
+    <input type="number" id="quantity" min="1" value="1" />
 
     <br>
-    <button>أضف إلى السلة</button>
+    <button onclick="addToCart()">أضف إلى السلة</button>
   </div>
 
+  <script>
+    function addToCart() {
+      const color = document.getElementById("color").value;
+      const quantity = parseInt(document.getElementById("quantity").value);
+
+      const item = {
+        name: "بلوزة كوروشيه",
+        price: "250 جنيه",
+        material: "صوف تركي",
+        color: color,
+        quantity: quantity,
+        image: "https://i.postimg.cc/XvyJJmyv/Whats-App-Image-2025-04-14-at-05-28-01-7dbbeb11.jpg"
+      };
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("تمت إضافة المنتج إلى السلة");
+    }
+  </script>
 </body>
 </html>
